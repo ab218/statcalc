@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd client && yarn start",
+    "start": "cd client && serve -s build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "yarn && yarn build"
+    "heroku-postbuild": "cd client && yarn build"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/ab218/statcalc/issues"
   },
-  "homepage": "https://github.com/ab218/statcalc#readme"
+  "homepage": "https://github.com/ab218/statcalc#readme",
+  "dependencies": {}
 }

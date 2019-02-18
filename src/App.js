@@ -18,19 +18,25 @@ class App extends Component {
     return (
       <div className="App">
         <div className="stats">
-          <input 
-          value={this.state.vita}
-          onChange={this.handleChange('vita')}
-          />
-          <input 
-          value={this.state.mana}
-          onChange={this.handleChange('mana')}
-          />
+          <div className="vita">
+            <h1>Vita</h1>
+            <input 
+            value={this.state.vita}
+            onChange={this.handleChange('vita')}
+            />
+          </div>
+          <div className="mana">
+            <h1>Mana</h1>
+            <input 
+            value={this.state.mana}
+            onChange={this.handleChange('mana')}
+            />
+          </div>
         </div>
         <div className="output">
           <table>
             <tr>
-              <th>Spell</th>
+              <th style={{padding: '0 5vw'}}>Spell</th>
               <th>Damage</th>
             </tr>
             <tr>

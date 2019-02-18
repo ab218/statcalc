@@ -50,71 +50,71 @@ class App extends Component {
             </tr>
             <tr style={{color: 'blue'}}>
               <td>LS</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 0.5) + (mana * 2.5))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 0.5) + (mana * 2.5))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))}</td> 
             </tr>
             <tr style={{color: 'green'}}>
               <td>DA</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 1) + (mana * 1))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 1) + (mana * 1))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * ((vita * 1) + (mana * 1)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 1) + (mana * 1)))}</td> 
             </tr>
             <tr style={{color: 'red'}}>
               <td>Sam</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 2))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 2))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (vita * 2))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (vita * 2))}</td> 
             </tr>
             <tr style={{color: 'purple'}}>
               <td>1st Sa</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 1.8) + (mana * 0.45))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 1.8) + (mana * 0.45))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * ((vita * 1.8) + (mana * 0.45)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 1.8) + (mana * 0.45)))}</td> 
             </tr>
             <tr style={{color: 'purple'}}>
               <td>2nd Sa</td>
-              <td>{Math.floor((1 + (ac) / 100) * ((vita * 0.83) * 1.8) + ((mana * 0.98) * 0.45))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * ((vita * 0.83) * 1.8) + ((mana * 0.98) * 0.45))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (((vita * 0.83) * 1.8) + ((mana * 0.98) * 0.45)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (((vita * 0.83) * 1.8) + ((mana * 0.98) * 0.45)))}</td> 
             </tr>
             <tr style={{color: 'purple'}}>
               <td>3rd Sa</td>
-              <td>{Math.floor((1 + (ac) / 100) * ((vita * Math.pow(0.83, 2)) * 1.8) + ((mana * Math.pow(0.98, 2)) * 0.45))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * ((vita * Math.pow(0.83, 2)) * 1.8) + ((mana * Math.pow(0.98, 2)) * 0.45))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (((vita * Math.pow(0.83, 2)) * 1.8) + ((mana * Math.pow(0.98, 2)) * 0.45)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (((vita * Math.pow(0.83, 2)) * 1.8) + ((mana * Math.pow(0.98, 2)) * 0.45)))}</td> 
             </tr>
             <tr style={{color: 'purple'}}>
               <td>4th Sa</td>
-              <td>{Math.floor((1 + (ac) / 100) * ((vita * Math.pow(0.83, 3)) * 1.8) + ((mana * Math.pow(0.98, 3)) * 0.45))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * ((vita * Math.pow(0.83, 3)) * 1.8) + ((mana * Math.pow(0.98, 3)) * 0.45))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (((vita * Math.pow(0.83, 3)) * 1.8) + ((mana * Math.pow(0.98, 3)) * 0.45)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (((vita * Math.pow(0.83, 3)) * 1.8) + ((mana * Math.pow(0.98, 3)) * 0.45)))}</td> 
             </tr>
             <tr style={{color: 'purple'}}>
               <td>5th Sa</td>
-              <td>{Math.floor((1 + (ac) / 100) * ((vita * Math.pow(0.83, 4)) * 1.8) + ((mana * Math.pow(0.98, 4)) * 0.45))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * ((vita * Math.pow(0.83, 4)) * 1.8) + ((mana * Math.pow(0.98, 4)) * 0.45))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (((vita * Math.pow(0.83, 4)) * 1.8) + ((mana * Math.pow(0.98, 4)) * 0.45)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (((vita * Math.pow(0.83, 4)) * 1.8) + ((mana * Math.pow(0.98, 4)) * 0.45)))}</td> 
             </tr>
             <tr>
               <td></td>
             </tr>
             <tr style={{color: 'blue'}}>
               <td>Berserk</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 0.85))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 0.85))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (vita * 0.85))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (vita * 0.85))}</td> 
             </tr>
             <tr style={{color: 'green'}}>
               <td>WW</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 1.575))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 1.575))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (vita * 1.575))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (vita * 1.575))}</td> 
             </tr>
             <tr style={{color: 'red'}}>
               <td>Assault</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 0.5))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 0.5))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * (vita * 0.5))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * (vita * 0.5))}</td> 
             </tr>
             <tr style={{color: 'purple'}}>
               <td>Sam</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 1.875 + mana * 0.5))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 1.875 + mana * 0.5))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * ((vita * 1.875 + mana * 0.5)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 1.875 + mana * 0.5)))}</td> 
             </tr>
             <tr style={{color: 'orange'}}>
               <td>Sa</td>
-              <td>{Math.floor((1 + (ac) / 100) * (vita * 0.4875 + mana * 0.1))}</td> 
-              <td>{Math.floor(1.3 * (1 + (ac) / 100) * (vita * 0.4875 + mana * 0.1))}</td> 
+              <td>{Math.floor((1 + (ac / 100)) * ((vita * 0.4875 + mana * 0.1)))}</td> 
+              <td>{Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.4875 + mana * 0.1)))}</td> 
             </tr>
           </table>
           </div>

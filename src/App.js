@@ -229,6 +229,7 @@ class App extends Component {
         </div>
         <div className="caveStats">
         <h3>Reference</h3>
+        <h5>Turtle 4: 1.8m - 2.5m</h5>
         <h5>ATG 10: 3.3m - 4.3m</h5>
         <h5>ATG 11: 4.5m - 5.7m</h5>
         </div>

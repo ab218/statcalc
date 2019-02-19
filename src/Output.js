@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Mage from './Warrior.js'
+import Mage from './Mage.js'
 import Rogue from './Rogue.js'
-import Warrior from './Mage.js'
+import Warrior from './Warrior.js'
 
 class Output extends Component {
   render() {

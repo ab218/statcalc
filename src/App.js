@@ -112,14 +112,14 @@ class App extends Component {
                   <th>W/ Sleep</th>
                 </tr>
                 <tr style={{color: 'blue'}}>
-                  <td>LS</td>
-                  <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))).toLocaleString()}</td> 
-                  <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))).toLocaleString()}</td> 
-                </tr>
-                <tr style={{color: 'green'}}>
                   <td>DA</td>
                   <td>{(Math.floor((1 + (ac / 100)) * ((vita * 1) + (mana * 1)))).toLocaleString()}</td> 
                   <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 1) + (mana * 1)))).toLocaleString()}</td> 
+                </tr>
+                <tr style={{color: 'green'}}>
+                  <td>LS</td>
+                  <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))).toLocaleString()}</td> 
+                  <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))).toLocaleString()}</td> 
                 </tr>
                 <tr style={{color: 'red'}}>
                   <td>Sam</td>
@@ -172,6 +172,11 @@ class App extends Component {
                   <td>WW</td>
                   <td>{(Math.floor((1 + (ac / 100)) * (vita * 1.575))).toLocaleString()}</td> 
                   <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (vita * 1.575))).toLocaleString()}</td> 
+                </tr>
+                <tr style={{color: 'green'}}>
+                  <td>WW (kwi/orb)</td>
+                  <td>{(Math.floor((1 + (ac / 100)) * (vita * 1.75))).toLocaleString()}</td> 
+                  <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (vita * 1.75))).toLocaleString()}</td> 
                 </tr>
                 <tr style={{color: 'red'}}>
                   <td>Assault</td>

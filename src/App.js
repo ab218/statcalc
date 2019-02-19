@@ -91,14 +91,12 @@ class App extends Component {
           </div>
           <div className="cavebuttons">
           <h5>My cave...</h5>
-            <div className="Atg10">
-              <button 
-                style={{width: '9vw'}}
-                onClick={() => this.setAc('-76')}
-              >
-              Gogoon/ATG
-              </button>
-            </div>
+            <button
+              className="cave"
+              onClick={() => this.setAc('-76')}
+            >
+            Gogoon/ATG
+            </button>
           </div>
         </div>
         <div className="output">

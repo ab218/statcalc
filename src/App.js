@@ -188,6 +188,16 @@ class App extends Component {
                   <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.4875 + mana * 0.1)))).toLocaleString()}</td> 
                   <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.4875 + mana * 0.1)))).toLocaleString()}</td> 
                 </tr>
+                <tr style={{color: 'brown'}}>
+                  <td>Rend</td>
+                  <td>{(Math.floor((1 + (ac / 100)) * ((vita * 2 + mana * 2)))).toLocaleString()}</td> 
+                  <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 2 + mana * 2)))).toLocaleString()}</td> 
+                </tr>
+                <tr style={{color: 'brown'}}>
+                  <td>Townie</td>
+                  <td>{(Math.floor((1 + (ac / 100)) * (vita * 3 ))).toLocaleString()}</td> 
+                  <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (vita * 3))).toLocaleString()}</td> 
+                </tr>
               </tbody>
             </table>
           </div>

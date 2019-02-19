@@ -96,15 +96,7 @@ class App extends Component {
                 style={{width: '9vw'}}
                 onClick={() => this.setAc('-76')}
               >
-              Gogoon/ATG 7-10
-              </button>
-            </div>
-            <div className="Atg11">
-              <button 
-                style={{width: '9vw'}}
-                onClick={() => this.setAc('-83')}
-              >
-              ATG 11
+              Gogoon/ATG
               </button>
             </div>
           </div>

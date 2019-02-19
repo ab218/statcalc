@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   setAc = (ac) => {
-    this.setState({ ac })
+    this.setState({ ac, sc: false, dh: false })
   }
 
   handleChange = name => (event) => {

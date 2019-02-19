@@ -226,7 +226,12 @@ class App extends Component {
               </tbody>
             </table>
           </div>
-          </div>
+        </div>
+        <div className="caveStats">
+        <h3>Reference</h3>
+        <h5>ATG 10: 3.3m - 4.3m</h5>
+        <h5>ATG 11: 4.5m - 5.7m</h5>
+        </div>
       </div>
     );
   }

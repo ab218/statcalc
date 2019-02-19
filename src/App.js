@@ -49,6 +49,7 @@ class App extends Component {
                 <th style={{padding: '0 5vw'}}>Damage</th>
                 <th style={{padding: '0 5vw'}}>W/ Sleep</th>
               </tr>
+              <tr><td></td><td><h5>Rogue</h5></td></tr>
               <tr style={{color: 'blue'}}>
                 <td>LS</td>
                 <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.5) + (mana * 2.5)))).toString()}</td> 
@@ -89,9 +90,7 @@ class App extends Component {
                 <td>{(Math.floor((1 + (ac / 100)) * (((vita * Math.pow(0.83, 4)) * 1.8) + ((mana * Math.pow(0.98, 4)) * 0.45)))).toString()}</td> 
                 <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (((vita * Math.pow(0.83, 4)) * 1.8) + ((mana * Math.pow(0.98, 4)) * 0.45)))).toString()}</td> 
               </tr>
-              <tr>
-                <td></td>
-              </tr>
+              <tr><td></td><td><h5>Warrior</h5></td></tr>
               <tr style={{color: 'blue'}}>
                 <td>Berserk</td>
                 <td>{(Math.floor((1 + (ac / 100)) * (vita * 0.85))).toString()}</td> 
@@ -116,6 +115,32 @@ class App extends Component {
                 <td>Sa</td>
                 <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.4875 + mana * 0.1)))).toString()}</td> 
                 <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.4875 + mana * 0.1)))).toString()}</td> 
+              </tr>
+              <tr><td></td><td><h5>Mage</h5></td></tr>
+              <tr style={{color: 'blue'}}>
+                <td>HF</td>
+                <td>{(Math.floor((1 + (ac / 100)) * (mana * 1.8))).toString()}</td> 
+                <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (mana * 1.8))).toString()}</td> 
+              </tr>
+              <tr style={{color: 'green'}}>
+                <td>Inf</td>
+                <td>{(Math.floor((1 + (ac / 100)) * (mana * 1.5))).toString()}</td> 
+                <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (mana * 1.5))).toString()}</td> 
+              </tr>
+              <tr style={{color: 'red'}}>
+                <td>Sam</td>
+                <td>{(Math.floor((1 + (ac / 100)) * (mana * 2.5))).toString()}</td> 
+                <td>{(Math.floor(1.3 * (1 + (ac / 100)) * (mana * 2.5))).toString()}</td> 
+              </tr>
+              <tr style={{color: 'purple'}}>
+                <td>Sa</td>
+                <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.5 + mana * 2)))).toString()}</td> 
+                <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.5 + mana * 2)))).toString()}</td> 
+              </tr>
+              <tr style={{color: 'orange'}}>
+                <td>Za</td>
+                <td>{(Math.floor((1 + (ac / 100)) * ((vita * 0.3 + mana * 1.8)))).toString()}</td> 
+                <td>{(Math.floor(1.3 * (1 + (ac / 100)) * ((vita * 0.3 + mana * 1.8)))).toString()}</td> 
               </tr>
             </tbody>
           </table>

@@ -16,8 +16,18 @@
   padding: 0 1em;
 }
 
+.vitaInput {
+  font-size: 2vw;
+  border: 2px solid red;
+}
+
 .mana {
   padding: 0 1em;
+}
+
+.manaInput {
+  font-size: 2vw;
+  border: 2px solid blue;
 }
 
 .output {

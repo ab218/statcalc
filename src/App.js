@@ -50,6 +50,7 @@ class App extends Component {
           <div className="vita">
             <h1>Vita</h1>
             <input 
+            className="vitaInput"
             value={this.state.vita}
             onChange={this.handleChange('vita')}
             />
@@ -57,6 +58,7 @@ class App extends Component {
           <div className="mana">
             <h1>Mana</h1>
             <input 
+            className="manaInput"
             value={this.state.mana}
             onChange={this.handleChange('mana')}
             />

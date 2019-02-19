@@ -21,9 +21,28 @@
 
 .output {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.scBox {
+  padding: 0 1vw 0 3vw;
+}
+
+td, th {
+  padding: 0 1vw 1vh;
+}
+
+.cavebuttons {
+  padding: 0 3vw;
+}
+
+.checkboxes {
+  display: flex;
+  padding: 0 3vw;
 }
 
 .target {
-  padding: 3vh 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 2vw 3vh;
 }

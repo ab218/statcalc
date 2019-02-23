@@ -19,6 +19,7 @@
 .vitaInput {
   font-size: 3vw;
   border: 2px solid red;
+  margin: 10px 0;
 }
 
 .mana {
@@ -28,6 +29,7 @@
 .manaInput {
   font-size: 3vw;
   border: 2px solid blue;
+  margin: 10px 0;
 }
 
 .output {
@@ -42,7 +44,7 @@
 }
 
 .scBox {
-  padding: 0 1vw 0 3vw;
+  padding: 0 1vw;
 }
 
 td, th {

@@ -6,11 +6,14 @@ import Target from './Target'
 
 class App extends Component {
   state = {
+    ac: '-76',
     vita: '0',
     mana: '0',
-    ac: '-76',
-    sc: false,
+    desiredVita: '0',
+    desiredMana: '0',
     dh: false,
+    sc: false,
+    sleep: false,
   }
 
   addSc = () => {
@@ -35,6 +38,13 @@ class App extends Component {
     })
   }
 
+  addSleep = () => {
+    if (this.state.sleep) {
+      return this.setState({ sleep: false })
+    }
+    return this.setState({ sleep: true });
+  }
+
   setAc = (ac) => {
     this.setState({ ac, sc: false, dh: false })
   }
@@ -45,19 +55,29 @@ class App extends Component {
     });
   };
 
+  withSleep = () => {
+    if (this.state.sleep) {
+      return 1.3
+    }
+    return 1;
+  }
+
   render() {
-    const { vita, mana, ac, dh, sc } = this.state;
+    const { vita, mana, desiredVita, desiredMana, ac, dh, sc } = this.state;
     return (
       <div className="App">
         <Stats 
         vita={vita}
         mana={mana}
+        desiredVita={desiredVita}
+        desiredMana={desiredMana}
         handleChange={this.handleChange}
         />
         <Target 
         ac={ac} 
         addDh={this.addDh} 
-        addSc={this.addSc} 
+        addSc={this.addSc}
+        addSleep={this.addSleep}
         dh={dh} 
         handleChange={this.handleChange} 
         sc={sc}
@@ -66,7 +86,10 @@ class App extends Component {
         <Output 
         vita={vita}
         mana={mana}
+        desiredVita={desiredVita}
+        desiredMana={desiredMana}
         ac={ac}
+        withSleep={this.withSleep}
         />
         <div className="caveStats">
             <h3>Reference</h3>

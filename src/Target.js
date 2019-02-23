@@ -4,10 +4,18 @@ import './App.css';
 class Target extends Component {
 
   render() {
-    const { ac, addDh, addSc, dh, handleChange, sc, setAc } = this.props;
+    const { ac, addDh, addSc, addSleep, dh, handleChange, sc, sleep, setAc } = this.props;
     return (
         <div className="target">
           <div className="checkboxes">
+          <div className="sleepBox">
+              <h5>Add Sleep</h5>
+              <input 
+                type="checkbox"
+                checked={sleep}
+                onChange={addSleep}
+              />
+            </div>
             <div className="scBox">
               <h5>Add Sc</h5>
               <input 

@@ -3,7 +3,16 @@ import './App.css';
 
 class Stats extends Component {
   render() {
-    const { vita, mana, desiredVita, desiredMana, handleChange } = this.props;
+    const { 
+      vita, 
+      mana, 
+      desiredVita, 
+      desiredMana, 
+      handleVita, 
+      handleDesiredVita, 
+      handleMana, 
+      handleDesiredMana 
+    } = this.props;
     return (
         <div className="stats">
             <div className="vita">
@@ -11,13 +20,13 @@ class Stats extends Component {
                 <input 
                 className="vitaInput"
                 value={vita}
-                onChange={handleChange('vita')}
+                onChange={handleVita()}
                 />
                 <h4>Desired Vita</h4>
                 <input 
                 className="vitaInput"
                 value={desiredVita}
-                onChange={handleChange('desiredVita')}
+                onChange={handleDesiredVita()}
                 />
             </div>
             <div className="mana">
@@ -25,13 +34,13 @@ class Stats extends Component {
                 <input 
                 className="manaInput"
                 value={mana}
-                onChange={handleChange('mana')}
+                onChange={handleMana()}
                 />
                 <h4>Desired Mana</h4>
                 <input 
                 className="manaInput"
                 value={desiredMana}
-                onChange={handleChange('desiredMana')}
+                onChange={handleDesiredMana()}
                 />
             </div>
         </div>

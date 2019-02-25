@@ -198,11 +198,11 @@ class App extends Component {
             <h3>Reference</h3>
             <h5>1st room Bird4: 750k - 1.05 *(-75ac)</h5>
             <h5>2nd room Bird4: 850k - 1.05 (-76ac)</h5>
-            <h5>3rd room Bird4: 850k-1.15m (-76ac)</h5>
-            <h5>4th room Bird4: 800k-1.1m (-76ac)</h5>
+            <h5>3rd room Bird4: 850k - 1.15m (-76ac)</h5>
+            <h5>4th room Bird4: 800k - 1.1m (-76ac)</h5>
             <h5>5th room Bird4: 1.37m - 1.75m (-76ac)</h5>
-            <h5>6th room Bird4: 1.4m-1.8m (-76ac)</h5>
-            <h5>Bird4 LR: 1.5m-2m (-76ac)</h5>
+            <h5>6th room Bird4: 1.4m - 1.8m (-76ac)</h5>
+            <h5>Bird4 LR: 1.5m - 2m (-76ac)</h5>
             <h5>Turtle 4 LR: 1.8m - 2.5m (-76ac)</h5>
             <h5>ATG 9: 2.2m - 2.85m (-76ac)</h5>
             <h5>ATG 10: 3.3m - 4.3m (-76ac)</h5>

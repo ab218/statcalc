@@ -217,12 +217,6 @@ class App extends Component {
                   <td>-76</td>
                 </tr>
                 <tr>
-                  <td>Bird4 - 2nd Room</td>
-                  <td>850k</td>
-                  <td>1.05m</td>
-                  <td>-76</td>
-                </tr>
-                <tr>
                   <td>Bird4 - 3rd Room</td>
                   <td>850k</td>
                   <td>1.15m</td>

@@ -194,19 +194,96 @@ class App extends Component {
         ac={ac}
         withSleep={this.withSleep}
         />
-        <div className="caveStats">
             <h3>Reference</h3>
-            <h5>1st room Bird4: 750k - 1.05 *(-75ac)</h5>
-            <h5>2nd room Bird4: 850k - 1.05 (-76ac)</h5>
-            <h5>3rd room Bird4: 850k - 1.15m (-76ac)</h5>
-            <h5>4th room Bird4: 800k - 1.1m (-76ac)</h5>
-            <h5>5th room Bird4: 1.37m - 1.75m (-76ac)</h5>
-            <h5>6th room Bird4: 1.4m - 1.8m (-76ac)</h5>
-            <h5>Bird4 LR: 1.5m - 2m (-76ac)</h5>
-            <h5>Turtle 4 LR: 1.8m - 2.5m (-76ac)</h5>
-            <h5>ATG 9: 2.2m - 2.85m (-76ac)</h5>
-            <h5>ATG 10: 3.3m - 4.3m (-76ac)</h5>
-            <h5>ATG 11: 4.5m - 5.7m (-76ac)</h5>
+        <div className="caveStats">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Cave/Room</th>
+                  <th>Min Vita</th>
+                  <th>Max Vita</th>
+                  <th>AC</th>
+                </tr>
+                <tr>
+                  <td>Bird4 - 1st Room</td>
+                  <td>750k</td>
+                  <td>1.05m</td>
+                  <td>-75</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 2nd Room</td>
+                  <td>850k</td>
+                  <td>1.05m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 2nd Room</td>
+                  <td>850k</td>
+                  <td>1.05m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 3rd Room</td>
+                  <td>850k</td>
+                  <td>1.15m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 4th Room</td>
+                  <td>800k</td>
+                  <td>1.1m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 5th room</td>
+                  <td>1.37m</td>
+                  <td>1.75m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 6th room</td>
+                  <td>1.4m</td>
+                  <td>1.8m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - 7th room</td>
+                  <td>1.8m</td>
+                  <td>2.25m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Bird4 - Last room</td>
+                  <td>1.5m</td>
+                  <td>2m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>Turtle4 - Last room</td>
+                  <td>1.8m</td>
+                  <td>2.5m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>ATG 9</td>
+                  <td>2.2m</td>
+                  <td>2.85m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>ATG 10</td>
+                  <td>3.3m</td>
+                  <td>4.3m</td>
+                  <td>-76</td>
+                </tr>
+                <tr>
+                  <td>ATG 11</td>
+                  <td>4.5m</td>
+                  <td>5.7m</td>
+                  <td>-76</td>
+                </tr>
+            </tbody>
+            </table>
         </div>
       </div>
     );

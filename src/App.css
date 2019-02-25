@@ -3,6 +3,11 @@
   padding-bottom: 5vh;
 }
 
+.caveStats {
+  display: flex;
+  justify-content: center;
+}
+
 .stats {
   display: flex;
   justify-content: center;

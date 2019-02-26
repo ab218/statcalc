@@ -63,8 +63,8 @@ class References extends Component {
                     </tr>
                     <tr>
                         <td>Bird4[LR]</td>
-                        <td>1.75m</td>
-                        <td>2.25m</td>
+                        <td>1.7m</td>
+                        <td>2.15m</td>
                         <td>-76</td>
                     </tr>
                     <tr>

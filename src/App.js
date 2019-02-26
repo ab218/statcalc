@@ -22,6 +22,8 @@ class App extends Component {
     sc: false,
     sleep: false,
   }
+
+  
   
   addSc = () => {
     if (this.state.sc) {
@@ -76,7 +78,7 @@ class App extends Component {
       exp = null
     }
     this.setState({
-      vita: value,
+      vita: value.replace(/[^\d,]+/g, ''),
       vitaExp: exp
     });
   };
@@ -95,7 +97,7 @@ class App extends Component {
       exp = null
     }
     this.setState({
-      mana: value,
+      mana: value.replace(/[^\d,]+/g, ''),
       manaExp: exp
     });
   };
@@ -114,7 +116,7 @@ class App extends Component {
       exp = null
     }
     this.setState({
-      desiredVita: value,
+      desiredVita: value.replace(/[^\d,]+/g, ''),
       desiredVitaExp: exp
     });
   };
@@ -133,7 +135,7 @@ class App extends Component {
       exp = null
     }
     this.setState({
-      desiredMana: value,
+      desiredMana: value.replace(/[^\d,]+/g, ''),
       desiredManaExp: exp
     });
   };
@@ -188,10 +190,10 @@ class App extends Component {
         desiredManaExp={desiredManaExp}
         />
         <Output 
-        vita={vita}
-        mana={mana}
-        desiredVita={desiredVita}
-        desiredMana={desiredMana}
+        vita={vita.replace(/\D/g, '')}
+        mana={mana.replace(/\D/g, '')}
+        desiredVita={desiredVita.replace(/\D/g, '')}
+        desiredMana={desiredMana.replace(/\D/g, '')}
         ac={ac}
         withSleep={this.withSleep}
         />

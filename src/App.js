@@ -19,18 +19,18 @@ class App extends Component {
     desiredManaExp: '0',
     exp: '0',
     dh: false,
-    sc: false,
-    sleep: false,
+    sc: true,
+    sleep: true,
   }
 
-  
-  
+
+
   addSc = () => {
     if (this.state.sc) {
       return this.setState(prevState => {
         return { ac: (parseInt(prevState.ac) - 50).toString(), sc: false }
       })
-    } 
+    }
     return this.setState(prevState => {
       return { ac: (parseInt(prevState.ac) + 50).toString(), sc: true }
     })
@@ -146,15 +146,15 @@ class App extends Component {
     }
     return 1;
   }
-  
+
   render() {
-    const { 
-      vita, 
-      mana, 
-      desiredVita, 
-      desiredMana, 
-      ac, 
-      dh, 
+    const {
+      vita,
+      mana,
+      desiredVita,
+      desiredMana,
+      ac,
+      dh,
       sc,
       vitaExp,
       manaExp,
@@ -163,7 +163,7 @@ class App extends Component {
     } = this.state;
     return (
       <div className="App">
-        <Stats 
+        <Stats
         vita={vita}
         mana={mana}
         desiredVita={desiredVita}
@@ -173,23 +173,23 @@ class App extends Component {
         handleDesiredVita={this.handleDesiredVita}
         handleDesiredMana={this.handleDesiredMana}
         />
-        <Target 
-        ac={ac} 
-        addDh={this.addDh} 
+        <Target
+        ac={ac}
+        addDh={this.addDh}
         addSc={this.addSc}
         addSleep={this.addSleep}
-        dh={dh} 
-        handleChange={this.handleChange} 
+        dh={dh}
+        handleChange={this.handleChange}
         sc={sc}
         setAc={this.setAc}
         />
-        <EXP 
+        <EXP
         vitaExp={vitaExp}
         manaExp={manaExp}
         desiredVitaExp={desiredVitaExp}
         desiredManaExp={desiredManaExp}
         />
-        <Output 
+        <Output
         vita={vita.replace(/\D/g, '')}
         mana={mana.replace(/\D/g, '')}
         desiredVita={desiredVita.replace(/\D/g, '')}

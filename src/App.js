@@ -19,8 +19,8 @@ class App extends Component {
     desiredManaExp: '0',
     exp: '0',
     dh: false,
-    sc: true,
-    sleep: true,
+    sc: false,
+    sleep: false,
   }
 
 

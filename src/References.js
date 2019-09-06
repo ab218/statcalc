@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
-class References extends Component {
-  render() {
+function References() {
     return (
     <div className="caveStats">
             <table>
@@ -90,12 +89,12 @@ class References extends Component {
                         <td>5.2m</td>
                         <td>6.5m</td>
                         <td>-76</td>
+                        <td style={{fontWeight: 'bold', color: 'green'}}>+15% increase</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     );
-  }
 }
 
 export default References;

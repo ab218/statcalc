@@ -3,7 +3,7 @@ import './App.css';
 import Output from './Output'
 import Stats from './Stats'
 import Target from './Target'
-import EXP from './Exp'
+import EXP from './Experience'
 import References from './References'
 
 export default class App extends React.PureComponent {

@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 
 function References() {
+  const styles = {
+    increase: {fontWeight: 'bold', color: 'green'}
+  }
     return (
     <div className="caveStats">
             <table>
@@ -86,10 +89,10 @@ function References() {
                     </tr>
                     <tr>
                         <td>ATG 11</td>
-                        <td>5.2m</td>
-                        <td>6.5m</td>
+                        <td style={styles.increase}>5.2m</td>
+                        <td style={styles.increase}>6.5m</td>
                         <td>-76</td>
-                        <td style={{fontWeight: 'bold', color: 'green'}}>+15% increase</td>
+                        <td style={styles.increase}>+15% increase</td>
                     </tr>
                 </tbody>
             </table>

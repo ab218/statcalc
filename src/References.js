@@ -87,8 +87,8 @@ class References extends Component {
                     </tr>
                     <tr>
                         <td>ATG 11</td>
-                        <td>4.5m</td>
-                        <td>5.7m</td>
+                        <td>5.2m</td>
+                        <td>6.5m</td>
                         <td>-76</td>
                     </tr>
                 </tbody>

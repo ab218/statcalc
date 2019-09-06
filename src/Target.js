@@ -4,23 +4,23 @@ import './App.css';
 class Target extends Component {
 
   render() {
-    const { 
-      ac, 
-      addDh, 
-      addSc, 
-      addSleep, 
-      dh, 
-      handleChange, 
-      sc, 
-      sleep, 
-      setAc 
+    const {
+      ac,
+      addDh,
+      addSc,
+      addSleep,
+      dh,
+      handleChange,
+      sc,
+      sleep,
+      setAc
     } = this.props;
     return (
         <div className="target">
           <div className="checkboxes">
             <div className="sleepBox">
                 <h5>Add Sleep</h5>
-                <input 
+                <input
                   type="checkbox"
                   checked={sleep}
                   onChange={addSleep}
@@ -28,7 +28,7 @@ class Target extends Component {
               </div>
             <div className="scBox">
               <h5>Add Sc</h5>
-              <input 
+              <input
                 type="checkbox"
                 checked={sc}
                 onChange={addSc}
@@ -36,7 +36,7 @@ class Target extends Component {
             </div>
             <div className="dhBox">
               <h5>Add DH</h5>
-              <input 
+              <input
                 type="checkbox"
                 checked={dh}
                 onChange={addDh}
@@ -45,7 +45,7 @@ class Target extends Component {
           </div>
           <div className="AC">
             <h4>Target AC</h4>
-            <input 
+            <input
             style={{width: '5vw'}}
             value={ac}
             onChange={handleChange('ac')}

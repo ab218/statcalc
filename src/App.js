@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Output from './Output'
 import Stats from './Stats'
 import Target from './Target'
-import EXP from './exp'
+import EXP from './Exp'
 import References from './References'
 
-class App extends Component {
+export default class App extends React.PureComponent {
   state = {
     ac: '-76',
     vita: '0',
@@ -22,8 +22,6 @@ class App extends Component {
     sc: false,
     sleep: false,
   }
-
-
 
   addSc = () => {
     if (this.state.sc) {
@@ -164,38 +162,38 @@ class App extends Component {
     return (
       <div className="App">
         <Stats
-        vita={vita}
-        mana={mana}
-        desiredVita={desiredVita}
-        desiredMana={desiredMana}
-        handleVita={this.handleVita}
-        handleMana={this.handleMana}
-        handleDesiredVita={this.handleDesiredVita}
-        handleDesiredMana={this.handleDesiredMana}
+          vita={vita}
+          mana={mana}
+          desiredVita={desiredVita}
+          desiredMana={desiredMana}
+          handleVita={this.handleVita}
+          handleMana={this.handleMana}
+          handleDesiredVita={this.handleDesiredVita}
+          handleDesiredMana={this.handleDesiredMana}
         />
         <Target
-        ac={ac}
-        addDh={this.addDh}
-        addSc={this.addSc}
-        addSleep={this.addSleep}
-        dh={dh}
-        handleChange={this.handleChange}
-        sc={sc}
-        setAc={this.setAc}
+          ac={ac}
+          addDh={this.addDh}
+          addSc={this.addSc}
+          addSleep={this.addSleep}
+          dh={dh}
+          handleChange={this.handleChange}
+          sc={sc}
+          setAc={this.setAc}
         />
         <EXP
-        vitaExp={vitaExp}
-        manaExp={manaExp}
-        desiredVitaExp={desiredVitaExp}
-        desiredManaExp={desiredManaExp}
+          vitaExp={vitaExp}
+          manaExp={manaExp}
+          desiredVitaExp={desiredVitaExp}
+          desiredManaExp={desiredManaExp}
         />
         <Output
-        vita={vita.replace(/\D/g, '')}
-        mana={mana.replace(/\D/g, '')}
-        desiredVita={desiredVita.replace(/\D/g, '')}
-        desiredMana={desiredMana.replace(/\D/g, '')}
-        ac={ac}
-        withSleep={this.withSleep}
+          vita={vita.replace(/\D/g, '')}
+          mana={mana.replace(/\D/g, '')}
+          desiredVita={desiredVita.replace(/\D/g, '')}
+          desiredMana={desiredMana.replace(/\D/g, '')}
+          ac={ac}
+          withSleep={this.withSleep}
         />
         <h3>Reference</h3>
         <References />
@@ -203,6 +201,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
-

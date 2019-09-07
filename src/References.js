@@ -13,7 +13,7 @@ export default function References() {
             <th>Cave[Room]</th>
             <th>Min Vita</th>
             <th>Max Vita</th>
-            <th>AC</th>
+            <th>Base AC</th>
           </tr>
           <tr>
             <td>Bird4[1]</td>

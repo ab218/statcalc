@@ -26,6 +26,7 @@ export default class App extends React.PureComponent {
 	};
 
 	componentDidMount = () => {
+		console.log(process.env);
 		if (!process.env.CONTENTFUL_SPACE) {
 			return;
 		}

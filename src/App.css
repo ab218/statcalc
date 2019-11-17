@@ -1,77 +1,78 @@
 .App {
-  text-align: center;
-  padding-bottom: 5vh;
+	text-align: center;
+	padding-bottom: 5vh;
 }
 
 .caveStats {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .stats {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 1em 0 2vh;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em 0 2vh;
 }
 
 .vita {
-  padding: 0 1em;
+	padding: 0 1em;
 }
 
 .vitaInput {
-  font-size: 3vw;
-  border: 2px solid red;
-  margin: 10px 0;
+	font-size: 3vw;
+	border: 2px solid red;
+	margin: 10px 0;
 }
 
 .mana {
-  padding: 0 1em;
+	padding: 0 1em;
 }
 
 .manaInput {
-  font-size: 3vw;
-  border: 2px solid blue;
-  margin: 10px 0;
+	font-size: 3vw;
+	border: 2px solid blue;
+	margin: 10px 0;
 }
 
 .output {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 @media (max-width: 768px) {
-  .output {
-    flex-direction: column;
-  }
+	.output {
+		flex-direction: column;
+	}
 }
 
 .scBox {
-  padding: 0 1vw;
+	padding: 0 1vw;
 }
 
-td, th {
-  padding: 0 1vw 1vh;
+td,
+th {
+	padding: 0 1vw 1vh;
 }
 
 .cavebuttons {
-  padding: 0 3vw;
+	padding: 0 3vw;
 }
 
 .checkboxes {
-  display: flex;
-  padding: 0 3vw;
+	display: flex;
+	padding: 0 3vw;
 }
 
 .target {
-  display: flex;
-  justify-content: center;
-  padding: 0 2vw 3vh;
+	display: flex;
+	justify-content: center;
+	padding: 0 2vw 3vh;
 }
 
 .class {
-  margin: 0 auto;
-  text-align: left;
+	margin: 0 auto;
+	text-align: left;
 }

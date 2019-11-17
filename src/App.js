@@ -26,13 +26,12 @@ export default class App extends React.PureComponent {
 	};
 
 	componentDidMount = () => {
-		console.log(process.env);
 		if (!process.env.CONTENTFUL_SPACE) {
 			return;
 		}
 		const client = createClient({
-			space: process.env.CONTENTFUL_SPACE,
-			accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+			space: 'amldgun4xhvi',
+			accessToken: '4KiihzlnARD72q4Eaaik6KOI-citECC6Db7UJYWT_0A',
 		});
 		client
 			.getEntries()

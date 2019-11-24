@@ -5,7 +5,15 @@ import Rogue from './Rogue.js';
 import Warrior from './Warrior.js';
 
 export default function Output({ vita, mana, desiredVita, desiredMana, ac, withSleep }) {
-	const withAc = 1 + ac / 100;
+	function determineAC(armor) {
+		const ac = Number(armor);
+		if (ac >= -95) {
+			return 1 + ac / 100;
+		} else {
+			const adjAc = ac + 95;
+			return (1 - 95 / 100) * (1 + adjAc / 100);
+		}
+	}
 	return (
 		<div className="output">
 			<Rogue
@@ -13,7 +21,7 @@ export default function Output({ vita, mana, desiredVita, desiredMana, ac, withS
 				mana={mana}
 				desiredVita={desiredVita}
 				desiredMana={desiredMana}
-				withAc={withAc}
+				withAc={determineAC(ac)}
 				withSleep={withSleep}
 			/>
 			<Warrior
@@ -21,7 +29,7 @@ export default function Output({ vita, mana, desiredVita, desiredMana, ac, withS
 				mana={mana}
 				desiredVita={desiredVita}
 				desiredMana={desiredMana}
-				withAc={withAc}
+				withAc={determineAC(ac)}
 				withSleep={withSleep}
 			/>
 			<Mage
@@ -29,7 +37,7 @@ export default function Output({ vita, mana, desiredVita, desiredMana, ac, withS
 				mana={mana}
 				desiredVita={desiredVita}
 				desiredMana={desiredMana}
-				withAc={withAc}
+				withAc={determineAC(ac)}
 				withSleep={withSleep}
 			/>
 		</div>

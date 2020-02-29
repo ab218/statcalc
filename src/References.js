@@ -16,7 +16,7 @@ export default function References({ references }) {
 		});
 	};
 	return (
-		<div className="caveStats">
+		<div className="cave-stats">
 			<table>
 				<tbody>
 					<tr>

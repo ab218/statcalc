@@ -3,7 +3,7 @@
 	padding-bottom: 5vh;
 }
 
-.caveStats {
+.cave-stats {
 	display: flex;
 	justify-content: center;
 }
@@ -21,7 +21,7 @@
 	padding: 0 1em;
 }
 
-.vitaInput {
+.vita-input {
 	font-size: 3vw;
 	border: 2px solid red;
 	margin: 10px 0;
@@ -31,7 +31,7 @@
 	padding: 0 1em;
 }
 
-.manaInput {
+.mana-input {
 	font-size: 3vw;
 	border: 2px solid blue;
 	margin: 10px 0;
@@ -48,7 +48,7 @@
 	}
 }
 
-.scBox {
+.sc-box {
 	padding: 0 1vw;
 }
 
@@ -57,7 +57,7 @@ th {
 	padding: 0 1vw 1vh;
 }
 
-.cavebuttons {
+.cave-buttons {
 	padding: 0 3vw;
 }
 

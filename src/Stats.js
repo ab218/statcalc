@@ -15,15 +15,15 @@ export default function Stats({
 		<div className="stats">
 			<div className="vita">
 				<h4>Current Vita</h4>
-				<input className="vitaInput" value={vita} onChange={handleVita()} />
+				<input className="vitaInput" value={vita} onChange={handleVita} />
 				<h4>Desired Vita</h4>
-				<input className="vitaInput" value={desiredVita} onChange={handleDesiredVita()} />
+				<input className="vitaInput" value={desiredVita} onChange={handleDesiredVita} />
 			</div>
 			<div className="mana">
 				<h4>Current Mana</h4>
-				<input className="manaInput" value={mana} onChange={handleMana()} />
+				<input className="manaInput" value={mana} onChange={handleMana} />
 				<h4>Desired Mana</h4>
-				<input className="manaInput" value={desiredMana} onChange={handleDesiredMana()} />
+				<input className="manaInput" value={desiredMana} onChange={handleDesiredMana} />
 			</div>
 		</div>
 	);

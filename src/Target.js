@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-export default function Target({ ac, addDh, addSc, addSleep, dh, handleChange, sc, sleep, setAc }) {
+export default function Target({ ac, addSleep, addSc, addDh, dh, resetFields, sc, sleep, setAc }) {
 	return (
 		<div className="target">
 			<div className="checkboxes">
@@ -20,12 +20,12 @@ export default function Target({ ac, addDh, addSc, addSleep, dh, handleChange, s
 			</div>
 			<div className="AC">
 				<h4>Target AC</h4>
-				<input style={{ width: '5vw' }} value={ac} onChange={handleChange('ac')} />
+				<input style={{ width: '5vw' }} value={ac} onChange={(e) => setAc(e.target.value)} />
 			</div>
 			<div className="cavebuttons">
-				<h5>Set AC to:</h5>
-				<button className="cave" onClick={() => setAc('-76')}>
-					Gogoon/ATG
+				<h4>Reset Fields</h4>
+				<button className="cave" onClick={resetFields}>
+					Reset
 				</button>
 			</div>
 		</div>

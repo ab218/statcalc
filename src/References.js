@@ -5,14 +5,18 @@ export default function References({ references }) {
 	const mapReferences = (references) => {
 		return references.map((ref) => {
 			const { caveName, min, max, ac } = ref.fields;
-			return (
-				<tr key={caveName}>
-					<td>{caveName}</td>
-					<td>{min}</td>
-					<td>{max}</td>
-					<td>{ac}</td>
-				</tr>
-			);
+			if (ref && ref.fields && ref.fields.caveName) {
+				return (
+					<tr key={caveName}>
+						<td>{caveName}</td>
+						<td>{min}</td>
+						<td>{max}</td>
+						<td>{ac}</td>
+					</tr>
+				);
+			} else {
+				return null;
+			}
 		});
 	};
 	return (

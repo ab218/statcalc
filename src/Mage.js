@@ -39,7 +39,7 @@ export default function Mage({ vita, mana, desiredVita, desiredMana, withAc, wit
 					</tr>
 					<tr style={{ color: 'orange' }}>
 						<td>Za</td>
-						<td>{Math.floor(withSleep() * (withAc * (vita * 0.3 + mana * 1.8))).toLocaleString()}</td>
+						<td>{Math.floor(withSleep() * (withAc * (vita * 0.35 + mana * 1.7))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 0.3 + desiredMana * 1.8))).toLocaleString()}</td>
 					</tr>
 				</tbody>

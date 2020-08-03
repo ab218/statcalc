@@ -17,42 +17,42 @@ export default function Warrior({ vita, mana, desiredVita, desiredMana, withAc, 
 						<th>Current</th>
 						<th>Desired</th>
 					</tr>
-					<tr style={{ color: 'blue' }}>
+					<tr className="first-spell">
 						<td>Berserk</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 0.85))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 0.85))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'green' }}>
+					<tr className="second-spell">
 						<td>WW</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 1.575))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 1.575))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'green' }}>
+					<tr className="second-spell">
 						<td>WW (kwi/orb)</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 1.75))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 1.75))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'red' }}>
+					<tr className="third-spell">
 						<td>Assault</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 0.5))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 0.5))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'purple' }}>
+					<tr className="forth-spell">
 						<td>Sam</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 1.875 + mana * 0.5))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 1.875 + desiredMana * 0.5))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'orange' }}>
+					<tr className="fifth-spell">
 						<td>Sa</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 0.4875 + mana * 0.1))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 0.4875 + desiredMana * 0.1))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'brown' }}>
+					<tr className="sixth-spell">
 						<td>Rend</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 2 + mana * 2))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 2 + desiredMana * 2))).toLocaleString()}</td>
 					</tr>
-					<tr style={{ color: 'brown' }}>
+					<tr className="sixth-spell">
 						<td>Townie</td>
 						<td>{Math.floor(withSleep() * (withAc * (vita * 3))).toLocaleString()}</td>
 						<td>{Math.floor(withSleep() * (withAc * (desiredVita * 3))).toLocaleString()}</td>

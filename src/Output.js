@@ -18,7 +18,7 @@ export default function Output({ vita, mana, desiredVita, desiredMana, ac, withS
 		withSleep,
 	}) {
 		return (
-			<tr style={{ color: color }}>
+			<tr style={{ color }}>
 				<td>{spellName}</td>
 				<td>{Math.floor(withSleep() * (withAc * (vita * vitaMultiplyer + mana * manaMultiplyer))).toLocaleString()}</td>
 				<td>

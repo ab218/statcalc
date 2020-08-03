@@ -77,8 +77,28 @@ th {
 	text-align: left;
 }
 
+.first-spell {
+	color: blue;
+}
+
+.second-spell {
+	color: green;
+}
+.third-spell {
+	color: red;
+}
+.forth-spell {
+	color: purple;
+}
+.fifth-spell {
+	color: orange;
+}
+.sixth-spell {
+	color: brown;
+}
+
 /* Light mode */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 	body {
 		background-color: white;
 		color: black;
@@ -93,7 +113,7 @@ th {
 		background-color: white;
 		color: black;
 	}
-}
+} */
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
@@ -110,5 +130,26 @@ th {
 	.mana-input {
 		background-color: rgb(54, 57, 63);
 		color: white;
+	}
+
+	.first-spell {
+		color: #ffe380;
+	}
+
+	.second-spell {
+		color: #ff8f73;
+	}
+	.third-spell {
+		color: #79e2f2;
+	}
+	.forth-spell {
+		color: #d6a9d5;
+	}
+	.fifth-spell {
+		color: #57d9a3;
+	}
+
+	.sixth-spell {
+		color: #c39b77;
 	}
 }

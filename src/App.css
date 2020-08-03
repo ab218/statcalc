@@ -76,3 +76,39 @@ th {
 	margin: 0 auto;
 	text-align: left;
 }
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: white;
+		color: black;
+	}
+
+	.vita-input {
+		background-color: white;
+		color: black;
+	}
+
+	.mana-input {
+		background-color: white;
+		color: black;
+	}
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+
+	.vita-input {
+		background-color: black;
+		color: white;
+	}
+
+	.mana-input {
+		background-color: black;
+		color: white;
+	}
+}

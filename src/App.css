@@ -98,17 +98,17 @@ th {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: rgb(41, 43, 48);
+		background-color: rgb(54, 57, 63);
 		color: white;
 	}
 
 	.vita-input {
-		background-color: rgb(41, 43, 48);
+		background-color: rgb(54, 57, 63);
 		color: white;
 	}
 
 	.mana-input {
-		background-color: rgb(41, 43, 48);
+		background-color: rgb(54, 57, 63);
 		color: white;
 	}
 }

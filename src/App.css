@@ -124,11 +124,13 @@ th {
 
 	.vita-input {
 		background-color: rgb(54, 57, 63);
+		border: 2px solid #ff0000;
 		color: white;
 	}
 
 	.mana-input {
 		background-color: rgb(54, 57, 63);
+		border: 2px solid #00ccff;
 		color: white;
 	}
 

@@ -194,10 +194,10 @@ const SaveLoad = ({ vita, mana, desiredMana, desiredVita, loadStats }) => {
   return (
     <div>
       <button onClick={save} style={{ margin: "1em 2em" }}>
-        Save to local storage
+        Save stats to local storage
       </button>
       <button onClick={load} style={{ margin: "1em 2em" }}>
-        Load from local storage
+        Load stats from local storage
       </button>
     </div>
   );

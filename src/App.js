@@ -115,11 +115,15 @@ export default function App() {
   const withSleep = () => (sleep ? 1.3 : 1);
 
   const loadStats = (stats) => {
-    const { vita, mana, desiredVita, desiredMana } = stats;
+    const { vita, mana, desiredVita, desiredMana, sc, dh, sleep, ac } = stats;
     setVita(vita);
     setMana(mana);
     setDesiredMana(desiredMana);
     setDesiredVita(desiredVita);
+    setSc(sc);
+    setDh(dh);
+    setSleep(sleep);
+    setAc(ac);
   };
 
   return (
@@ -140,12 +144,17 @@ export default function App() {
         desiredMana={desiredMana}
         desiredVita={desiredVita}
         loadStats={loadStats}
+        sc={sc}
+        dh={dh}
+        sleep={sleep}
+        ac={ac}
       />
       <Target
         ac={ac}
         addSc={() => addDebuff(sc, setSc, 50)}
         addDh={() => addDebuff(dh, setDh, 12)}
         addSleep={() => setSleep(!sleep)}
+        sleep={sleep}
         dh={dh}
         resetFields={resetFields}
         sc={sc}
@@ -175,10 +184,20 @@ export default function App() {
   );
 }
 
-const SaveLoad = ({ vita, mana, desiredMana, desiredVita, loadStats }) => {
+const SaveLoad = ({
+  vita,
+  mana,
+  desiredMana,
+  desiredVita,
+  dh,
+  sc,
+  sleep,
+  ac,
+  loadStats,
+}) => {
   const save = () => {
     if (window && window.localStorage) {
-      const stats = { vita, mana, desiredVita, desiredMana };
+      const stats = { vita, mana, desiredVita, desiredMana, sc, dh, sleep, ac };
       window.localStorage.setItem("stats", JSON.stringify(stats));
     } else {
       alert("local storage not supported");
@@ -194,10 +213,10 @@ const SaveLoad = ({ vita, mana, desiredMana, desiredVita, loadStats }) => {
   return (
     <div>
       <button onClick={save} style={{ margin: "1em 2em" }}>
-        Save stats to local storage
+        Save settings to local storage
       </button>
       <button onClick={load} style={{ margin: "1em 2em" }}>
-        Load stats from local storage
+        Load settings from local storage
       </button>
     </div>
   );

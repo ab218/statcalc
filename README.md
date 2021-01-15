@@ -18,4 +18,12 @@ A calculator used to predict damage output for an online RPG known as [NexusTK](
 
 2. Install dependencies with `yarn` or `npm install`.
 
-3. `yarn start` or `npm start`.
+--- (Optional)
+
+3. Create `.env` file based on `.example.env`'s location and format.
+
+4. Input Contentful credentials in `.env`
+
+--- (/Optional)
+
+5. `yarn start` or `npm start`.

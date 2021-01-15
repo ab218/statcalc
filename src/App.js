@@ -6,6 +6,8 @@ import Stats from "./Stats";
 import Target from "./Target";
 import EXP from "./Experience";
 import References from "./References";
+const CONTENTFUL_ACCESS_TOKEN = process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN;
+const CONTENTFUL_SPACE = process.env.REACT_APP_CONTENTFUL_SPACE;
 
 export default function App() {
   const [ac, setAc] = useState("-76"),
@@ -23,15 +25,12 @@ export default function App() {
     [references, setReferences] = useState([]);
 
   useEffect(() => {
-    if (
-      !process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN &&
-      process.env.REACT_APP_CONTENTFUL_SPACE
-    ) {
+    if (!CONTENTFUL_ACCESS_TOKEN || !CONTENTFUL_SPACE) {
       return;
     }
     const client = createClient({
-      space: process.env.CONTENTFUL_SPACE,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      space: CONTENTFUL_SPACE,
+      accessToken: CONTENTFUL_ACCESS_TOKEN,
     });
     client
       .getEntries()

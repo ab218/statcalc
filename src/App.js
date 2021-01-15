@@ -204,7 +204,7 @@ const SaveLoad = ({
     }
   };
   const load = () => {
-    if (window && window.localStorage) {
+    if (window && window.localStorage && window.localStorage.getItem("stats")) {
       return loadStats(JSON.parse(window.localStorage.getItem("stats")));
     } else {
       alert("local storage not supported");

@@ -23,7 +23,10 @@ export default function App() {
     [references, setReferences] = useState([]);
 
   useEffect(() => {
-    if (!process.env.CONTENTFUL_ACCESS_TOKEN && process.env.CONTENTFUL_SPACE) {
+    if (
+      !process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN &&
+      process.env.REACT_APP_CONTENTFUL_SPACE
+    ) {
       return;
     }
     const client = createClient({

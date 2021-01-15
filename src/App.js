@@ -24,8 +24,8 @@ export default function App() {
 
   useEffect(() => {
     const client = createClient({
-      space: "amldgun4xhvi",
-      accessToken: "4KiihzlnARD72q4Eaaik6KOI-citECC6Db7UJYWT_0A",
+      space: process.env.CONTENTFUL_SPACE,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     });
     client
       .getEntries()

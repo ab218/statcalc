@@ -60,18 +60,18 @@ export default function App() {
   };
 
   const calculateExpForVita = (value) => {
-    const vCost = Math.floor(
+    const vitaCost = Math.floor(
       Math.floor(value / 20000) * 4 - (Math.floor(value / 20000) - 6) * 2,
     );
-    const vSells = Math.floor(value / 100);
-    const vSegments = Math.floor((vSells - 1000) / 200);
+    const vitaSells = Math.floor(value / 100);
+    const vitaSegments = Math.floor((vitaSells - 1000) / 200);
     if (value < 100000) {
       return (value / 100) * 20;
     } else if (value >= 100000) {
       return (
-        vSells * 20 +
-        ((2 * vSegments + 20 + 22) / 2 - 20) * (vSegments * 200) +
-        (vSells - 1000 - vSegments * 200) * (vCost - 20)
+        vitaSells * 20 +
+        ((2 * vitaSegments + 20 + 22) / 2 - 20) * (vitaSegments * 200) +
+        (vitaSells - 1000 - vitaSegments * 200) * (vitaCost - 20)
       );
     } else {
       return null;
@@ -79,18 +79,18 @@ export default function App() {
   };
 
   const calculateExpForMana = (value) => {
-    const mCost = Math.floor(
+    const manaCost = Math.floor(
       Math.floor(value / 10000) * 4 - (Math.floor(value / 10000) - 6) * 2,
     );
-    const mSells = Math.floor(value / 50);
-    const mSegments = Math.floor((mSells - 1000) / 200);
+    const manaSells = Math.floor(value / 50);
+    const manaSegments = Math.floor((manaSells - 1000) / 200);
     if (value < 50000) {
       return (value / 50) * 20;
     } else if (value >= 50000) {
       return (
-        mSells * 20 +
-        ((2 * mSegments + 20 + 22) / 2 - 20) * (mSegments * 200) +
-        (mSells - 1000 - mSegments * 200) * (mCost - 20)
+        manaSells * 20 +
+        ((2 * manaSegments + 20 + 22) / 2 - 20) * (manaSegments * 200) +
+        (manaSells - 1000 - manaSegments * 200) * (manaCost - 20)
       );
     } else {
       return null;

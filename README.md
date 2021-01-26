@@ -2,6 +2,8 @@
 
 A calculator used to predict damage output for an online RPG known as [NexusTK](https://www.nexustk.com).
 
+![App Screenshot](docs/statcalc.png)
+
 ## How To Use
 
 1. Input your current or desired vital statistics (vitality and mana).

@@ -3,7 +3,7 @@ export default function OtherLinks() {
   return (
     <div style={{ position: "absolute" }}>
       <div>
-        <a href={"https://calc.bils.ca"}>Damage Calculator</a>
+        <a href={"https://bils.ca"}>Stat Tracker</a>
       </div>
       <div>
         <a href={"https://bank.bils.ca"}>Bank Organizer</a>

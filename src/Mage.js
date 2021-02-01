@@ -16,7 +16,7 @@ export default function Mage({
           <tr>
             <td />
             <td>
-              <h5>Mage</h5>
+              <h5 className={"title"}>Mage</h5>
             </td>
           </tr>
           <tr>

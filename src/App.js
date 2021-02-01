@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "contentful";
+import OtherLinks from "./OtherLinks";
 import "./App.css";
 import Output from "./Output";
 import Stats from "./Stats";
@@ -60,19 +61,20 @@ export default function App() {
   };
 
   const calculateExpForVita = (value) => {
-    const vitaCost = Math.floor(
-      Math.floor(value / 20000) * 4 - (Math.floor(value / 20000) - 6) * 2,
-    );
+    const fraction = value.slice(-2);
+    const vitaCost =
+      Math.floor(value / 20000) * 4 - (Math.floor(value / 20000) - 6) * 2;
     const vitaSells = Math.floor(value / 100);
     const vitaSegments = Math.floor((vitaSells - 1000) / 200);
+    const calculateOver100k =
+      vitaSells * 20 +
+      ((2 * vitaSegments + 20 + 22) / 2 - 20) * (vitaSegments * 200) +
+      (vitaSells - 1000 - vitaSegments * 200) * (vitaCost - 20);
+    console.log((calculateOver100k * fraction) / 100);
     if (value < 100000) {
       return (value / 100) * 20;
     } else if (value >= 100000) {
-      return (
-        vitaSells * 20 +
-        ((2 * vitaSegments + 20 + 22) / 2 - 20) * (vitaSegments * 200) +
-        (vitaSells - 1000 - vitaSegments * 200) * (vitaCost - 20)
-      );
+      return calculateOver100k + (calculateOver100k * fraction) / 1000;
     } else {
       return null;
     }
@@ -133,6 +135,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <OtherLinks />
       <Stats
         vita={vita}
         mana={mana}
@@ -181,7 +184,7 @@ export default function App() {
       />
       {references.length > 0 && (
         <React.Fragment>
-          <h3>Reference</h3>
+          <h3 className={"title"}>Reference</h3>
           <References references={references} />
         </React.Fragment>
       )}

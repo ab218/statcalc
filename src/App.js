@@ -184,7 +184,12 @@ export default function App() {
       />
       {references.length > 0 && (
         <React.Fragment>
-          <h3 className={"title"}>Reference</h3>
+          <h3
+            style={{ textDecoration: "underline", marginTop: "20px" }}
+            className={"title"}
+          >
+            Reference
+          </h3>
           <References references={references} />
         </React.Fragment>
       )}

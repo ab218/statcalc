@@ -61,39 +61,38 @@ export default function App() {
   };
 
   const calculateExpForVita = (value) => {
-    const fraction = value.slice(-2);
-    const vitaCost =
-      Math.floor(value / 20000) * 4 - (Math.floor(value / 20000) - 6) * 2;
+    const fraction = value.slice(-2) / 100;
     const vitaSells = Math.floor(value / 100);
+    // Every 20k after 100k is 1 "segment"
     const vitaSegments = Math.floor((vitaSells - 1000) / 200);
+    const vitaUnitCostOver100k = 20 + (vitaSegments + 1) * 2;
     const calculateOver100k =
       vitaSells * 20 +
-      ((2 * vitaSegments + 20 + 22) / 2 - 20) * (vitaSegments * 200) +
-      (vitaSells - 1000 - vitaSegments * 200) * (vitaCost - 20);
-    console.log((calculateOver100k * fraction) / 100);
-    if (value < 100000) {
+      vitaUnitCostOver100k * (vitaSegments * 200) +
+      (vitaSells - 1000 - vitaSegments * 200) * (vitaUnitCostOver100k - 20);
+    if (value <= 100000) {
       return (value / 100) * 20;
-    } else if (value >= 100000) {
-      return calculateOver100k;
+    } else if (value > 100000) {
+      return calculateOver100k + fraction * vitaUnitCostOver100k;
     } else {
       return null;
     }
   };
 
   const calculateExpForMana = (value) => {
-    const manaCost = Math.floor(
-      Math.floor(value / 10000) * 4 - (Math.floor(value / 10000) - 6) * 2,
-    );
+    const fraction = value.slice(-2) / 100;
     const manaSells = Math.floor(value / 50);
+    // Every 10k after 50k is 1 "segment"
     const manaSegments = Math.floor((manaSells - 1000) / 200);
-    if (value < 50000) {
+    const manaUnitCostOver50k = 20 + (manaSegments + 1) * 2;
+    const calculateOver50k =
+      manaSells * 20 +
+      manaUnitCostOver50k * (manaSegments * 200) +
+      (manaSells - 1000 - manaSegments * 200) * (manaUnitCostOver50k - 20);
+    if (value <= 50000) {
       return (value / 50) * 20;
-    } else if (value >= 50000) {
-      return (
-        manaSells * 20 +
-        ((2 * manaSegments + 20 + 22) / 2 - 20) * (manaSegments * 200) +
-        (manaSells - 1000 - manaSegments * 200) * (manaCost - 20)
-      );
+    } else if (value > 50000) {
+      return calculateOver50k + fraction * manaUnitCostOver50k;
     } else {
       return null;
     }

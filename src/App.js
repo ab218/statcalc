@@ -61,38 +61,63 @@ export default function App() {
   };
 
   const calculateExpForVita = (value) => {
-    const fraction = value.slice(-2) / 100;
-    const vitaSells = Math.floor(value / 100);
+    const vitaUnit = 100;
+    const fraction = Number(value.slice(-2)) / 1000;
+    const vitaSells = Math.floor(Number(value) / vitaUnit);
     // Every 20k after 100k is 1 "segment"
     const vitaSegments = Math.floor((vitaSells - 1000) / 200);
+    const costUntil100k = (Number(value) / 100) * 20;
     const vitaUnitCostOver100k = 20 + (vitaSegments + 1) * 2;
-    const calculateOver100k =
-      vitaSells * 20 +
-      vitaUnitCostOver100k * (vitaSegments * 200) +
-      (vitaSells - 1000 - vitaSegments * 200) * (vitaUnitCostOver100k - 20);
-    if (value <= 100000) {
-      return (value / 100) * 20;
-    } else if (value > 100000) {
-      return calculateOver100k + fraction * vitaUnitCostOver100k;
+    const partial = (vitaSells - 1000 - vitaSegments * 200) / 10;
+
+    let counter = 0;
+    for (let i = 0; i <= vitaSegments; i++) {
+      const vitaUnitCost = 20 + (i + 1) * 2;
+      if (i === vitaSegments) {
+        counter += vitaUnitCost * partial;
+      } else {
+        counter += vitaUnitCost * 20;
+      }
+    }
+    counter += fraction * vitaUnitCostOver100k;
+    counter *= 10;
+    if (Number(value) <= 100000) {
+      return costUntil100k;
+    } else if (Number(value) > 100000) {
+      return counter + 20000;
     } else {
       return null;
     }
   };
 
   const calculateExpForMana = (value) => {
-    const fraction = value.slice(-2) / 100;
-    const manaSells = Math.floor(value / 50);
+    const manaUnit = 50;
+    const fraction =
+      Number(value.slice(-2)) >= 50
+        ? (Number(value.slice(-2)) - 50) / 1000
+        : Number(value.slice(-2)) / 1000;
+    const manaSells = Math.floor(Number(value) / manaUnit);
     // Every 10k after 50k is 1 "segment"
     const manaSegments = Math.floor((manaSells - 1000) / 200);
+    const manaUntil50k = (Number(value) / 50) * 20;
     const manaUnitCostOver50k = 20 + (manaSegments + 1) * 2;
-    const calculateOver50k =
-      manaSells * 20 +
-      manaUnitCostOver50k * (manaSegments * 200) +
-      (manaSells - 1000 - manaSegments * 200) * (manaUnitCostOver50k - 20);
-    if (value <= 50000) {
-      return (value / 50) * 20;
-    } else if (value > 50000) {
-      return calculateOver50k + fraction * manaUnitCostOver50k;
+    const partial = (manaSells - 1000 - manaSegments * 200) / 10;
+
+    let counter = 0;
+    for (let i = 0; i <= manaSegments; i++) {
+      const manaUnitCost = 20 + (i + 1) * 2;
+      if (i === manaSegments) {
+        counter += manaUnitCost * partial;
+      } else {
+        counter += manaUnitCost * 20;
+      }
+    }
+    counter += fraction * manaUnitCostOver50k * 2;
+    counter *= 10;
+    if (Number(value) <= 50000) {
+      return manaUntil50k;
+    } else if (Number(value) > 50000) {
+      return counter + 20000;
     } else {
       return null;
     }

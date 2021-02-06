@@ -60,12 +60,12 @@ export default function App() {
     setSc(false);
   };
 
-  function calculateUnitsCost(completeSegments, incompleteSegments) {
+  function calculateUnitsCost(completeSegments, incompleteSegment) {
     let totalExp = 0;
     for (let i = 0; i <= completeSegments; i++) {
       const unitCost = 20 + (i + 1) * 2;
       if (i === completeSegments) {
-        totalExp += unitCost * incompleteSegments;
+        totalExp += unitCost * incompleteSegment;
       } else {
         totalExp += unitCost * 20;
       }
@@ -79,8 +79,8 @@ export default function App() {
     const vitaUnit = 100;
     // 100k vita costs 20bil (20000m)
     const costOf100kVita = 20000;
-    // the total number of complete vita units that have been sold
-    const vitaSells = Math.floor(Number(value) / vitaUnit);
+    // the total number of vita units that have been sold
+    const vitaSells = Number(value) / vitaUnit;
     // There are 1000 units in 100k. (100000 / 100)
     const vitaUnitsIn100kVita = 1000;
     // Every 20k after 100k is 1 "complete segment" (20000k vita / vitaUnit = 200 sells)
@@ -106,7 +106,7 @@ export default function App() {
 
   const calculateExpForMana = (value) => {
     const manaUnit = 50;
-    const manaSells = Math.floor(Number(value) / manaUnit);
+    const manaSells = Number(value) / manaUnit;
     const manaUnitsIn50kMana = 1000;
     // Every 10k after 50k is 1 "complete segment"
     const completeSegments = Math.floor((manaSells - manaUnitsIn50kMana) / 200);

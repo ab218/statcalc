@@ -73,26 +73,27 @@ export default function App() {
     return totalExp * 10;
   }
 
+  // From 0 to 100k, 1 vita unit (100) costs 20m. From 100k to 120k, 1 vita unit costs 22m.
+  // From 120k, 1 vita unit costs 24m. As vita grows by 20k, the cost of 1 vita
+  // unit increases by 2m.
   const calculateExpForVita = (value) => {
-    // calculating exp for over 100k. From 100k to 120k, Vita costs 22m.
-    // From 120k, Vita costs 24m as vita grows by 20k, the cost of vita increases by 2m.
     const vitaUnit = 100;
-    // 100k vita costs 20bil (20000m)
-    const costOf100kVita = 20000;
     // Every 20k after 100k is 1 "complete segment" (20000k vita / vitaUnit = 200 sells)
     // Subtract 5 segments that make up 100k vita (20k * 5)
     const completeSegments = Math.floor(value / 20000 - 5);
-    // 20m = cost of vita under 100k
-    const costUntil100k = (Number(value) / vitaUnit) * 20;
     // calculate the size of the incomplete segment. (1 segment is 20k vita)
     const incompleteSegment = (value % 20000) / 1000;
     const totalCostAfter100k = calculateUnitsCost(
       completeSegments,
       incompleteSegment,
     );
-    if (Number(value) <= 100000) {
+    if (value <= 100000) {
+      // 20m = cost of one vita unit under 100k
+      const costUntil100k = (value / vitaUnit) * 20;
       return costUntil100k;
-    } else if (Number(value) > 100000) {
+    } else if (value > 100000) {
+      // 100k vita costs 20bil (20000m)
+      const costOf100kVita = 20000;
       return costOf100kVita + totalCostAfter100k;
     } else {
       return null;
@@ -102,19 +103,18 @@ export default function App() {
   const calculateExpForMana = (value) => {
     const manaUnit = 50;
     // Every 10k after 50k is 1 "complete segment"
-    const completeSegments = Math.floor(Number(value) / 10000 - 5);
-    const manaUntil50k = (Number(value) / manaUnit) * 20;
-    const costOf50kMana = 20000;
+    const completeSegments = Math.floor(value / 10000 - 5);
     const incompleteSegment = (value % 10000) / 500;
     const totalCostAfter50k = calculateUnitsCost(
       completeSegments,
       incompleteSegment,
     );
-
-    if (Number(value) <= 50000) {
+    if (value <= 50000) {
+      const manaUntil50k = (value / manaUnit) * 20;
       return manaUntil50k;
-    } else if (Number(value) > 50000) {
-      return totalCostAfter50k + costOf50kMana;
+    } else if (value > 50000) {
+      const costOf50kMana = 20000;
+      return costOf50kMana + totalCostAfter50k;
     } else {
       return null;
     }
@@ -122,22 +122,22 @@ export default function App() {
 
   const handleVita = (value) => {
     setVita(value.replace(/[^\d,]+/g, ""));
-    setVitaExp(calculateExpForVita(value));
+    setVitaExp(calculateExpForVita(Number(value)));
   };
 
   const handleMana = (value) => {
     setMana(value.replace(/[^\d,]+/g, ""));
-    setManaExp(calculateExpForMana(value));
+    setManaExp(calculateExpForMana(Number(value)));
   };
 
   const handleDesiredVita = (value) => {
     setDesiredVita(value.replace(/[^\d,]+/g, ""));
-    setDesiredVitaExp(calculateExpForVita(value));
+    setDesiredVitaExp(calculateExpForVita(Number(value)));
   };
 
   const handleDesiredMana = (value) => {
     setDesiredMana(value.replace(/[^\d,]+/g, ""));
-    setDesiredManaExp(calculateExpForMana(value));
+    setDesiredManaExp(calculateExpForMana(Number(value)));
   };
 
   const withSleep = () => (sleep ? 1.3 : 1);

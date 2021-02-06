@@ -60,35 +60,6 @@ export default function App() {
     setSc(false);
   };
 
-  // const calculateExpForVita = (value) => {
-  //   const vitaUnit = 100;
-  //   const fraction = Number(value.slice(-2)) / 1000;
-  //   const vitaSells = Math.floor(Number(value) / vitaUnit);
-  //   // Every 20k after 100k is 1 "segment"
-  //   const vitaSegments = Math.floor((vitaSells - 1000) / 200);
-  //   const costUntil100k = (Number(value) / 100) * 20;
-  //   // 100k vita costs 20bil (20000)
-  //   const costOf100kVita = 20000;
-  //   // calculating exp for over 100k. At 100k, Vita costs 22m. At 120k, Vita costs 24m
-  //   // as vita grows by 20k, the cost of vita increases by 2m.
-  //   const vitaUnitCostOver100k = 20 + (vitaSegments + 1) * 2;
-  //   // calculate the cost of an incomplete segment.
-  //   const partial = (vitaSells - 1000 - vitaSegments * 200) / 10;
-  //   const test = (value % 20000) / 1000;
-  //   const testCost = calculateUnitsCost(vitaSegments, test);
-  //   const unitsCost = calculateUnitsCost(vitaSegments, partial);
-  //   const totalCostAfter100k =
-  //     (unitsCost + fraction * vitaUnitCostOver100k) * 10;
-  //   console.log(testCost, totalCostAfter100k / 10);
-  //   if (Number(value) <= 100000) {
-  //     return costUntil100k;
-  //   } else if (Number(value) > 100000) {
-  //     return costOf100kVita + totalCostAfter100k;
-  //   } else {
-  //     return null;
-  //   }
-  // };
-
   function calculateUnitsCost(completeSegments, incompleteSegments) {
     let totalExp = 0;
     for (let i = 0; i <= completeSegments; i++) {
@@ -106,6 +77,8 @@ export default function App() {
     // calculating exp for over 100k. From 100k to 120k, Vita costs 22m.
     // From 120k, Vita costs 24m as vita grows by 20k, the cost of vita increases by 2m.
     const vitaUnit = 100;
+    // 100k vita costs 20bil (20000m)
+    const costOf100kVita = 20000;
     // the total number of complete vita units that have been sold
     const vitaSells = Math.floor(Number(value) / vitaUnit);
     // There are 1000 units in 100k. (100000 / 100)
@@ -116,9 +89,7 @@ export default function App() {
     );
     // 20m = cost of vita under 100k
     const costUntil100k = (Number(value) / vitaUnit) * 20;
-    // 100k vita costs 20bil (20000)
-    const costOf100kVita = 20000;
-    // calculate the cost of an incomplete segment. (1 segment is 20k vita)
+    // calculate the cost of the incomplete segment. (1 segment is 20k vita)
     const incompleteSegment = (value % 20000) / 1000;
     const totalCostAfter100k = calculateUnitsCost(
       completeSegments,

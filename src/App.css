@@ -3,9 +3,6 @@
   margin: 15px;
 }
 
-.title {
-  color: black;
-}
 
 .cave-stats {
   display: flex;
@@ -25,21 +22,11 @@
   padding: 0 1em;
 }
 
-.vita-input {
-  font-size: 3vw;
-  border: 2px solid red;
-  margin: 10px 0;
-}
 
 .mana {
   padding: 0 1em;
 }
 
-.mana-input {
-  font-size: 3vw;
-  border: 2px solid blue;
-  margin: 10px 0;
-}
 
 .output {
   display: flex;
@@ -81,94 +68,53 @@ th {
   text-align: left;
 }
 
+body {
+  background-color: rgb(54, 57, 63);
+  color: white;
+}
+
+button {
+  color: black;
+}
+
+input {
+  background-color: rgb(54, 57, 63);
+  color: white;
+}
+
+.title {
+  color: aliceblue;
+}
+
+.vita-input {
+  background-color: rgb(54, 57, 63);
+  border: 2px solid #ff0000;
+  color: white;
+}
+
+.mana-input {
+  background-color: rgb(54, 57, 63);
+  border: 2px solid #00ccff;
+  color: white;
+}
+
 .first-spell {
-  color: blue;
+  color: #ffe380;
 }
 
 .second-spell {
-  color: green;
+  color: #ff8f73;
 }
 .third-spell {
-  color: red;
+  color: #79e2f2;
 }
 .forth-spell {
-  color: purple;
+  color: #d6a9d5;
 }
 .fifth-spell {
-  color: orange;
+  color: #57d9a3;
 }
+
 .sixth-spell {
-  color: brown;
-}
-
-/* Light mode */
-/* @media (prefers-color-scheme: light) {
-	body {
-		background-color: white;
-		color: black;
-	}
-
-	.vita-input {
-		background-color: white;
-		color: black;
-	}
-
-	.mana-input {
-		background-color: white;
-		color: black;
-	}
-} */
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(54, 57, 63);
-    color: white;
-  }
-
-  button {
-    color: black;
-  }
-
-  input {
-    background-color: rgb(54, 57, 63);
-    color: white;
-  }
-
-  .title {
-    color: aliceblue;
-  }
-
-  .vita-input {
-    background-color: rgb(54, 57, 63);
-    border: 2px solid #ff0000;
-    color: white;
-  }
-
-  .mana-input {
-    background-color: rgb(54, 57, 63);
-    border: 2px solid #00ccff;
-    color: white;
-  }
-
-  .first-spell {
-    color: #ffe380;
-  }
-
-  .second-spell {
-    color: #ff8f73;
-  }
-  .third-spell {
-    color: #79e2f2;
-  }
-  .forth-spell {
-    color: #d6a9d5;
-  }
-  .fifth-spell {
-    color: #57d9a3;
-  }
-
-  .sixth-spell {
-    color: #c39b77;
-  }
+  color: #c39b77;
 }
